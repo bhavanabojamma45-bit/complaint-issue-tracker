@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Complaints List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Submitted Complaints</h1>
+
+<ul id="complaintList"></ul>
+
+<script>
+
+let complaints = JSON.parse(localStorage.getItem("complaints")) || [];
+
+let list = document.getElementById("complaintList");
+
+complaints.forEach(function(c){
+
+let li = document.createElement("li");
+
+li.innerText = c.name + " : " + c.issue + " (" + c.status + ")";
+
+list.appendChild(li);
+
+});
+
+</script>
+
+</body>
+</html>
