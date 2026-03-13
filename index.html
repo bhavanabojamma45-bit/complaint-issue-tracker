@@ -1,24 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Complaint Tracker</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Complaint Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <div class="mode-toggle">
+        <button id="toggleMode">Toggle Dark/Light Mode</button>
+    </div>
 
-<h1>Complaint & Issue Tracker</h1>
+    <h1>Submit a Complaint</h1>
 
-<input type="text" id="name" placeholder="Enter Your Name">
-<input type="text" id="issue" placeholder="Enter Complaint">
+    <form id="complaintForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="issue" placeholder="Issue" required>
+        <select id="type" required>
+            <option value="">Select Type</option>
+            <option value="Network">Network</option>
+            <option value="Service">Service</option>
+            <option value="Billing">Billing</option>
+            <option value="Other">Other</option>
+        </select>
+        <select id="priority" required>
+            <option value="">Select Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <input type="text" id="location" placeholder="Enter Location">
+        <input type="text" id="location" placeholder="Location">
 
-<button onclick="submitComplaint()">Submit</button>
+<button type="button" onclick="getLocation()">📍 Get Live Location</button>
+        <button type="submit">Submit Complaint</button>
+    </form>
 
-<br><br>
+    <div class="voice-input">
+        <button id="voiceBtn">🎤 Voice Input</button>
+    </div>
 
-<a href="complaints.html">View Complaints</a>
+    <input type="text" id="searchInput" placeholder="Search complaints by name or issue">
 
-<script src="script.js"></script>
+    <ul id="complaintList"></ul>
 
+    <div id="toastContainer"></div>
+
+    <!-- AI Chat -->
+    <div id="aiChat">
+        <div id="chatMessages"></div>
+        <input type="text" id="chatInput" placeholder="Ask AI">
+        <button id="chatSend">Send</button>
+    </div>
+
+    <a href="admin.html">Go to Admin Dashboard</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

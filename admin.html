@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mode-toggle">
+        <button id="toggleMode">Toggle Dark/Light Mode</button>
+    </div>
+
+    <h1>Admin Dashboard - Complaint Tracker</h1>
+
+    <div class="filters">
+        <label>Filter by Type:</label>
+        <select id="filterType">
+            <option value="All">All</option>
+            <option value="Network">Network</option>
+            <option value="Service">Service</option>
+            <option value="Billing">Billing</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Filter by Priority:</label>
+        <select id="filterPriority">
+            <option value="All">All</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <input type="text" id="searchInputAdmin" placeholder="Search complaints by name or issue">
+    </div>
+
+    <table id="complaintTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Issue</th>
+                <th>Type</th>
+                <th>Priority</th>
+                <th>Date</th>
+                <th>Photo</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <canvas id="complaintChart" width="400" height="200"></canvas>
+
+    <a href="index.html">Back to Submit Complaint</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

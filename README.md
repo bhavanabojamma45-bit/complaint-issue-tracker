@@ -1,28 +1,29 @@
 # Complaint & Issue Tracker
 
-This project was developed for the Aakriti Hackathon.
-
-## Problem
-Many institutions do not have a proper system to track complaints. 
-Issues often remain unresolved due to lack of transparency.
-
-## Solution
-Our Complaint & Issue Tracker allows users to submit complaints 
-and administrators to monitor and resolve them efficiently.
+## Description
+A web-based system to submit and track complaints. Users can submit complaints with Name, Issue, Type, and Priority. Admins can view all complaints, filter by Type and Priority, and track high-priority issues.
 
 ## Technologies Used
 - HTML
 - CSS
 - JavaScript
-- GitHub
+- LocalStorage (persistent data)
+- Open source libraries: None (can add Bootstrap or Chart.js later)
 
 ## Features
-- Submit complaints
-- Track complaints
-- View complaint list
+- Submit complaints with validation and duplicate prevention
+- Admin dashboard with filtering by Type and Priority
+- High priority complaints highlighted in red
+- AI Assistant to guide users in submitting complaints
+- Fully frontend-based, ready for backend integration
 
-## Open Source Libraries
-- Bootstrap
-- Chart.js
+## Usage
+1. Open `index.html` in a browser to submit complaints.
+2. Open `admin.html` in a browser to view all complaints.
+3. Use AI assistant in the bottom right corner for guidance.
 
-Credits to the open-source community.
+## Future Improvements
+- Integrate Node.js + MongoDB backend for permanent storage
+- Enhance AI assistant with real OpenAI API
+- Add charts for statistics (Chart.js)
+- Add authentication for admin access
